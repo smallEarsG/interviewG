@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+ 
+  <script>
+    //  获取浏览器宽度
+    var resize = () => {
+      var width = document.documentElement.clientWidth || document.body.clientWidth
+      if (width < 1500) { width = 1500 }
+      var radio = width / 1920
+      var fontSize = 100 * radio // 得到1px 与 1rem 比值
+      document.getElementsByTagName('html')[0].style['font-size'] = fontSize + 'px'
+    }
+    resize()
+    window.addEventListener('resize', resize)
+  </script>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>
