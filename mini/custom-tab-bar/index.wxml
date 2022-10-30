@@ -1,0 +1,28 @@
+<view class="tTabBar">
+  <view 
+    class="tTabBar-item" 
+    wx:for="{{list}}" 
+    wx:key="index"
+    bindtap="switchLab"
+    data-jumpPath="{{item.pagePath}}"
+    data-index="{{index}}"
+  >
+  <block wx:if="{{index==2}}">
+   <view>
+    <view style="/*position:absolute*//*top:-61rpx*/background:#fff;position:relative;top:-14px;padding:10rpx;border-radius: 50%;">
+      <cover-image class="tTabBar-item-image" src="{{selected === index?item.selectedIconPath:item.iconPath}}"  style="width:73rpx;height:73rpx;"/>
+    </view>
+    <cover-view class="tTabBar-item-name" style="{{(selected === index?'color:#3aa71e':'')+';;position:relative;top: -14px;text-align:center;'}}  " >
+      {{item.text}}
+    </cover-view>
+   </view>
+    
+  </block>
+  <block wx:else>
+    <cover-image class="tTabBar-item-image" src="{{selected === index?item.selectedIconPath:item.iconPath}}" />
+    <cover-view class="tTabBar-item-name" style="{{selected === index?'color:#3aa71e':''}}">
+      {{item.text}}
+    </cover-view>
+  </block>
+  </view>
+</view>

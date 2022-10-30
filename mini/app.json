@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/tabBar/page1",
+    "pages/tabBar/page2",
+    "pages/tabBar/page3"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#999",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "工作",
+        "iconPath": "./assets/img/icon1.png",
+        "selectedIconPath": "./assets/img/icon2.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "助手",
+        "iconPath": "./assets/img/icon3.png",
+        "selectedIconPath": "./assets/img/icon4.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "常用",
+        "iconPath": "./assets/img/icon5.png",
+        "selectedIconPath": "./assets/img/icon6.png"
+      },
+      {
+        "pagePath": "pages/tabBar/page1",
+        "text": "分析",
+        "iconPath": "./assets/img/icon7.png",
+        "selectedIconPath": "./assets/img/icon8.png"
+      }
+      ,
+      {
+        "pagePath": "pages/tabBar/page2",
+        "text": "我的",
+        "iconPath": "./assets/img/icon9.png",
+        "selectedIconPath": "./assets/img/icon10.png"
+      }
+    ]
+  },
+
+  "sitemapLocation": "sitemap.json"
+}

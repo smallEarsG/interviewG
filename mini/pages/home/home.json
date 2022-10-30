@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "dialogB":"../../compoment/dialog/funDialog"
+  }
+}

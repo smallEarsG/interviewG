@@ -1,0 +1,79 @@
+<view class="container">
+<view class="header">
+ <view class="title"> 早上好！张三先生</view>
+ <view class="tips">
+ <image class="tipsIcon" src="../../assets/img/tips.png" alt="tips"/>
+ <view class="number">77</view>
+ </view>
+</view>
+
+<!-- <image src="{{slideshow[2]}}" ></image> -->
+<view class="swiper">
+      <swiper indicator-dots="true"
+        autoplay="true" interval="3000">
+        <block wx:for="{{slideshow}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item">
+            <image src="{{item}}"/>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+ </view>
+ <view class="nav">
+ <block wx:for="{{navIcons}}" wx:key="*this">
+   <view class="navItem">
+      <view class="navIcom"><image src="{{item}}"/></view>
+      <view class="navTxt">功能{{index+1}}</view>
+   </view>
+ </block>
+ </view>
+ <view class="content">
+     <view class="content-hander">
+       <block wx:for="{{['a','d','b','c']}}" wx:key="*this">
+         <view class="dialogItem" bindtap="show" data-index=" 功能{{item}}"> 
+           <view class="imgcontainer" >
+            <view class="imgbox">
+              <view class="img leftTopImg" >
+           
+               <image  src="{{dialogIcon[0][0]}}"/>
+              </view>
+              <view class="img  leftBottomImg">
+               <image src="{{dialogIcon[0][1]}}"/>
+              </view>
+            </view>
+            <view class="imgbox">
+              <view class="img  rightTopImg">
+               <image src="{{dialogIcon[0][2]}}"/>
+              </view>
+              <view class="img rightBottomImg">
+               <image src="{{dialogIcon[0][3]}}"/>
+              </view>
+              </view>
+           </view>
+           <view class="itemTxt">
+            功能{{item}}
+           </view>
+         </view>
+       </block>
+     </view>
+    <view class="cootent-other">
+     <block wx:for="{{ohterIcon}}"  wx:key="*this">
+         <view class="othercontainer">
+             <block wx:for="{{item}}" wx:key="*this"   wx:for-index="ind" wx:for-item="itemName"> 
+             <view class="otherItem ">
+                  <view class="otherIcon">
+                    <image src="{{itemName}}" />
+                  </view>
+                  <view>功能{{ind+1}}</view>
+              </view>
+             </block>
+             <block wx:for="{{4-item.length}}">
+                <view class="otherItem"></view>
+             </block>
+         </view>
+     </block>
+    </view>
+ </view>
+ <dialogB title="{{title}}" dataInfo="{{dialogIcon}}" bind:close = "close" wx:if="{{isShow}}"></dialogB>
+</view>

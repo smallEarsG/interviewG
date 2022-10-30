@@ -1,0 +1,41 @@
+.container{
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(32, 32, 31, 0.404);
+}
+.content{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #fff;
+  width: 500rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.title{
+  background-color: rgb(16, 20, 44);
+  color:#3aa71e;
+  line-height: 60rpx;
+  text-align: center;
+
+}
+.othercontainer{
+  display: flex;
+  padding: 10rpx;
+ 
+}
+.otherItem{
+  flex: 1;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+ 
+}
+.otherIcon{
+  width: 116rpx;
+  height: 116rpx;
+}

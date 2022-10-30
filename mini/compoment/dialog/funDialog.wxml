@@ -1,0 +1,24 @@
+<!--compoment/dialog/funDialog.wxml-->
+<view class="container" mut-bind:tap="test">
+ 
+</view>
+<view class="content">
+      <view class="title">{{title}}</view>
+      <view class="contontBox">
+        <block wx:for="{{dataInfo}}"  wx:key="*this">
+         <view class="othercontainer">
+             <block wx:for="{{item}}" wx:key="*this"   wx:for-index="ind" wx:for-item="itemName"> 
+             <view class="otherItem ">
+                  <view class="otherIcon">
+                    <image src="{{itemName}}" />
+                  </view>
+                  <view>功能{{index*4+ind+1}}</view>
+              </view>
+             </block>
+             <block wx:for="{{4-item.length}}">
+                <view class="otherItem"></view>
+             </block>
+         </view>
+     </block>
+      </view>
+  </view>
